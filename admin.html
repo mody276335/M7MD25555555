@@ -2,81 +2,45 @@
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <title>صفحة التحكم</title>
+    <title>منيو المطعم</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- كود التتبع الخاص بـ Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "p49n1ebm19");
+    </script>
 </head>
-<body class="admin-page">
+<body class="index-page">
     <!-- رأس الصفحة -->
-    <header class="admin-header">
-        <h1>لوحة التحكم</h1>
-        <p>إدارة معلومات المطعم والمنيو</p>
+    <header>
+        <div class="restaurant-info">
+            <img id="restaurant-logo" src="" alt="شعار المطعم" style="max-width: 150px;">
+            <h1 id="restaurant-name">مطعمك</h1>
+            <p id="restaurant-address"></p>
+            <p id="restaurant-phone"></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#المقبلات">المقبلات</a></li>
+                <li><a href="#الأطباق الرئيسية">الأطباق الرئيسية</a></li>
+                <li><a href="#الحلويات">الحلويات</a></li>
+                <li><a href="#المشروبات">المشروبات</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- المحتوى الرئيسي -->
     <main>
-        <h2>معلومات المطعم</h2>
-        <form id="restaurant-form">
-            <label for="restaurant-name-input">اسم المطعم:</label>
-            <input type="text" id="restaurant-name-input" required>
-
-            <label for="restaurant-address-input">العنوان:</label>
-            <input type="text" id="restaurant-address-input">
-
-            <label for="restaurant-phone-input">رقم الهاتف:</label>
-            <input type="text" id="restaurant-phone-input">
-
-            <label for="restaurant-location-input">موقع المطعم (رابط خرائط جوجل):</label>
-            <input type="text" id="restaurant-location-input">
-
-            <label for="restaurant-logo-input">رابط الشعار:</label>
-            <input type="text" id="restaurant-logo-input">
-
-            <button type="submit">تحديث معلومات المطعم</button>
-        </form>
-
-        <h2>إضافة طبق جديد</h2>
-        <form id="dish-form">
-            <label for="name">اسم الطبق:</label>
-            <input type="text" id="name" required>
-
-            <label for="description">وصف الطبق:</label>
-            <textarea id="description" rows="4" required></textarea>
-
-            <label for="price">السعر:</label>
-            <input type="number" id="price" required>
-
-            <label for="category">الفئة:</label>
-            <select id="category" required>
-                <option value="المقبلات">المقبلات</option>
-                <option value="الأطباق الرئيسية">الأطباق الرئيسية</option>
-                <option value="الحلويات">الحلويات</option>
-                <option value="المشروبات">المشروبات</option>
-            </select>
-
-            <label for="image">رابط الصورة (اختياري):</label>
-            <input type="text" id="image">
-
-            <button type="submit">إضافة الطبق</button>
-        </form>
-
-        <h2>قائمة الأطباق</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>اسم الطبق</th>
-                    <th>الفئة</th>
-                    <th>إجراءات</th>
-                </tr>
-            </thead>
-            <tbody id="dishes-table-body">
-                <!-- سيتم توليد المحتوى بواسطة JavaScript -->
-            </tbody>
-        </table>
+        <!-- سيتم توليد المحتوى بواسطة JavaScript -->
     </main>
 
     <!-- تذييل الصفحة -->
     <footer>
-        <p>&copy; 2023 مطعمك. جميع الحقوق محفوظة.</p>
+        <p id="signature"></p>
     </footer>
 
     <script src="script.js"></script>
