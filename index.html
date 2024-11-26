@@ -5,13 +5,27 @@
     <title>منيو المطعم</title>
     <link rel="stylesheet" href="styles.css">
 
-    <!-- كود التتبع الخاص بـ Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "p49n1ebm19");
+    <!-- Firebase App (المطلوب دائمًا) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+
+    <!-- كود التهيئة الخاص بـ Firebase -->
+    <script>
+      // كود التهيئة الخاص بك
+      const firebaseConfig = {
+        apiKey: "AIzaSyB9J1ubti8SuC81iguvqKS_5M9aupkE0fs",
+        authDomain: "restaurantmenu-40930.firebaseapp.com",
+        projectId: "restaurantmenu-40930",
+        storageBucket: "restaurantmenu-40930.appspot.com",
+        messagingSenderId: "1083571741216",
+        appId: "1:1083571741216:web:3ad67c2fa1321658ef5245",
+        measurementId: "G-9TNJDJ58J1"
+      };
+
+      // تهيئة Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
     </script>
 </head>
 <body class="index-page">
@@ -40,9 +54,10 @@
 
     <!-- تذييل الصفحة -->
     <footer>
-        <p id="signature"></p>
+        <p id="signature">برمجة محمد الجنيرال 01022116620</p>
     </footer>
 
+    <!-- تضمين ملف script.js -->
     <script src="script.js"></script>
 </body>
 </html>
